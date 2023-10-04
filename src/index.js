@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import SideBar from './main/sideBar';
+import Camers from './main/camers';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SideBar />
+    <Camers />
   </React.StrictMode>
 );
 

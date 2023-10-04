@@ -1,56 +1,57 @@
 import React from "react";
 import { PiListLight, PiHouseLight, PiNumberSquareOneLight, PiNumberSquareTwoLight, PiNumberSquareThreeLight, PiNumberSquareFourLight, PiMapPinLight } from "react-icons/pi";
-import style from './sideBarStyle.css';
+import style from './sideBarStyle.module.css';
 function SideBar() {
     return (
         <nav>
             <ul>
-                <li>
-                    <PiListLight className="icon"/>
+                <li className={style['side-list']}>
+                    <PiListLight className={style.icon} />
                 </li>
-                <li>
-                    <a>
-                        <PiHouseLight className="icon"/>
-                        <span className="nav-item">
+                <li className={style['side-list']}>
+                    <a className={style.text}>
+                        <PiHouseLight className={style.icon} />
+                        <span className={style['nav-item']}>
                             메인 보기
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <PiNumberSquareOneLight className="icon"/>
-                        <span className="nav-item">
+                <li className={style['side-list']}>
+                    <a href="#" className={style.text}>
+                        <PiNumberSquareOneLight className={style.icon} />
+                        <span className={style['nav-item']}>
                             카메라 1 보기
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a>
-                        <PiNumberSquareTwoLight className="icon"/>
-                        <span className="nav-item">
+                <li className={style['side-list']}>
+                    <a className={style.text}>
+                        <PiNumberSquareTwoLight className={style.icon} />
+                        <span className={style['nav-item']}>
                             카메라 2 보기
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a>
-                        <PiNumberSquareThreeLight className="icon"/>
-                        <span className="nav-item">
+                <li className={style['side-list']}>
+                    <a className={style.text}>
+                        <PiNumberSquareThreeLight className={style.icon} />
+                        <span className={style['nav-item']}>
                             카메라 3 보기
                         </span>
                     </a>
                 </li>
-                <li> <a>
-                    <PiNumberSquareFourLight className="icon"/>
-                    <span className="nav-item">
-                        카메라 4 보기
-                    </span>
-                </a>
+                <li className={style['side-list']}>
+                    <a className={style.text}>
+                        <PiNumberSquareFourLight className={style.icon} />
+                        <span className={style['nav-item']}>
+                            카메라 4 보기
+                        </span>
+                    </a>
                 </li>
-                <li>
-                    <a>
-                        <PiMapPinLight className="icon"/>
-                        <span className="nav-item">
+                <li className={style['side-list']}>
+                    <a className={style.text}>
+                        <PiMapPinLight className={style.icon} />
+                        <span className={style['nav-item']}>
                             지도 보기
                         </span>
                     </a>
