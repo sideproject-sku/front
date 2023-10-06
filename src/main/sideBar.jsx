@@ -1,11 +1,13 @@
 import React from "react";
-import { PiListLight, 
+import {
+    PiListLight,
     PiHouseLight,
-     PiNumberSquareOneLight,
-      PiNumberSquareTwoLight,
-       PiNumberSquareThreeLight,
-        PiNumberSquareFourLight,
-         PiMapPinLight } from "react-icons/pi";
+    PiNumberSquareOneLight,
+    PiNumberSquareTwoLight,
+    PiNumberSquareThreeLight,
+    PiNumberSquareFourLight,
+    PiMapPinLight
+} from "react-icons/pi";
 import style from './sideBarStyle.module.css';
 import { Link } from "react-router-dom";
 

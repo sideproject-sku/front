@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Cameras from './main/cameras';
 import SideBar from './main/sideBar';
 import React from "react";
-import Camera1 from './detail/camera1';
+import Cam1 from './detail/detailCam1';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <div>
         <SideBar />
         <Routes>
-          <Route path="/camera/1" element={<Camera1 />} />
+          <Route path="/camera/1" element={<Cam1 />} />
           <Route path="/" element={<Cameras />} />
         </Routes>
       </div>
