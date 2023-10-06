@@ -18,7 +18,7 @@
     right: 10px;
   }
   
-  .camers-list {
+  .cameras-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -58,7 +58,7 @@
     grid-row: span 1;
   }
 
-  .camer2 {
+  .camera2 {
     width: 43vw;
     height: 36vh;
   }

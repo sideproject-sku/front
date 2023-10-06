@@ -1,28 +1,36 @@
 import React from "react";
-import { PiListLight, PiHouseLight, PiNumberSquareOneLight, PiNumberSquareTwoLight, PiNumberSquareThreeLight, PiNumberSquareFourLight, PiMapPinLight } from "react-icons/pi";
+import { PiListLight, 
+    PiHouseLight,
+     PiNumberSquareOneLight,
+      PiNumberSquareTwoLight,
+       PiNumberSquareThreeLight,
+        PiNumberSquareFourLight,
+         PiMapPinLight } from "react-icons/pi";
 import style from './sideBarStyle.module.css';
+import { Link } from "react-router-dom";
+
 function SideBar() {
     return (
         <nav>
             <ul>
-                <li className={style['side-list']}>
+                <li className={style['view-list']}>
                     <PiListLight className={style.icon} />
                 </li>
                 <li className={style['side-list']}>
-                    <a className={style.text}>
+                    <Link to="/" className={style.text}>
                         <PiHouseLight className={style.icon} />
                         <span className={style['nav-item']}>
                             메인 보기
                         </span>
-                    </a>
+                    </Link>
                 </li>
                 <li className={style['side-list']}>
-                    <a href="#" className={style.text}>
+                    <Link to="/camera/1" className={style.text}>
                         <PiNumberSquareOneLight className={style.icon} />
                         <span className={style['nav-item']}>
                             카메라 1 보기
                         </span>
-                    </a>
+                    </Link>
                 </li>
                 <li className={style['side-list']}>
                     <a className={style.text}>

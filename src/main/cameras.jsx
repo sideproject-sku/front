@@ -1,48 +1,46 @@
 import React from "react";
-import SideBar from "./sideBar";
+import { Link } from 'react-router-dom';
 import { GoDotFill } from "react-icons/go";
-import style from './camersStyle.module.css';
+import style from './camerasStyle.module.css';
 
-function Camers() {
+
+function Cameras() {
     return (
         <div className={style.all}>
             <main>
-                <div className={style['camers-list']}>
+                <div className={style['cameras-list']}>
                     <div className={style.container1}>
-                        <a className={style.text}>
+                        <Link to="/camera/1" className={style.text}>
                             <GoDotFill className={style.icon} />
-                            <span>camer1</span>
-                        </a>
-                        <div className={style.camer1}></div>
+                            <span>camera1</span>
+                        </Link>
+                        <div className={style.camera1}></div>
                     </div>
                     <div className={style.container2}>
                     <a className={style.text}>
                             <GoDotFill className={style.icon} />
-                            <span>camer2</span>
+                            <span>camera2</span>
                         </a>
-                        <div className={style.camer2}></div>
+                        <div className={style.camera2}></div>
                     </div>
                     <div className={style.container3}>
                     <a className={style.text}>
                             <GoDotFill className={style.icon} />
-                            <span>camer3</span>
+                            <span>camera3</span>
                         </a>
-                        <div className={style.camer3}></div>
+                        <div className={style.camera3}></div>
                     </div>
                     <div className={style.container4}>
                     <a className={style.text}>
                             <GoDotFill className={style.icon} />
-                            <span>camer4</span>
+                            <span>camera4</span>
                         </a>
-                        <div className={style.camer4}></div>
+                        <div className={style.camera4}></div>
                     </div>
                 </div>
             </main>
-            <nav>
-                <SideBar />
-            </nav>
         </div>
     );
 }
 
-export default Camers;
+export default Cameras;

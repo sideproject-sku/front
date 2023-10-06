@@ -5,7 +5,6 @@
     border: none;
     text-decoration: none;
     box-sizing: border-box;
-
 }
 
 nav {
@@ -15,9 +14,10 @@ nav {
     overflow: hidden;
     transition: 0 20px 35px rgba(0, 0, 0, 0.1);
     background-color: rgba(148, 148, 148, 1);
+    z-index: 1;
 }
 
-.side-list {
+.side-list, .view-list {
     padding: 5px;
 }
 
@@ -25,24 +25,22 @@ nav {
 .text {
     position: relative;
     color: black;
-    font-size: 14px;
+    font-size: 12px;
     display: table;
-    width: 180px;
-    padding: 3px 0px ;
-    top: 10px;
+    width: 160px;
+    padding: 1px 0px ;
 }
 
 .icon {
     position: relative;
     width: 70px;
     height: 30px;
-    top: 9px;
+    top: 10px;
     text-align: center;
 }
 
 .nav-item {
     margin-left: 1px;
-    padding: 10px;
 }
 
 nav:hover{
