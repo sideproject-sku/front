@@ -6,9 +6,6 @@ function Cam1() {
   // CCTV 경고 시각 데이터 예시 (백엔드에서 받아온 데이터로 대체해야 함)
   const [warningTimes, setWarningTimes] = useState([
     "08-31-2023 FRI 09:39:13 AM",
-    "08-31-2023 FRI 11:19:23 AM",
-    "08-31-2023 FRI 11:19:23 AM",
-    "08-31-2023 FRI 11:19:23 AM",
     "08-31-2023 FRI 11:19:23 AM"
     // 다른 경고 시각들을 여기에 추가
   ]);
