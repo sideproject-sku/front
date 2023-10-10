@@ -67,7 +67,7 @@ function Cam1() {
           </div>
             <div className={style.modalText}>
               <GoDotFill className={style.icon} />
-              <span className={style.camText}>CAMERA 01</span>
+              <span className={style.camModalText}>CAMERA 01</span>
               <span className={style.timeText}>{selectedTime}</span>
             </div>
             <div className={style.warningCam}></div>
