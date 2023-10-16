@@ -14,8 +14,8 @@ function Cam1() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedTime, setSelectedTime] = useState("");
 
-   // 모달 창 밖을 클릭했을 때 모달을 닫기 위한 ref
-   const modalRef = useRef(null);
+  // 모달 창 밖을 클릭했을 때 모달을 닫기 위한 ref
+  const modalRef = useRef(null);
 
   const openModal = (time) => {
     setSelectedTime(time);
@@ -34,8 +34,8 @@ function Cam1() {
     closeModal();
   };
 
-   // 모달 창 밖을 클릭했을 때 모달을 닫도록 이벤트 핸들러 함수 추가
-   const handleModalClick = (e) => {
+  // 모달 창 밖을 클릭했을 때 모달을 닫도록 이벤트 핸들러 함수 추가
+  const handleModalClick = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
       closeModal();
     }
@@ -48,14 +48,17 @@ function Cam1() {
         <span className={style.camText}>CAMERA 01</span>
       </div>
       <div className={style.camera1}></div>
-      <div className={style.dargerList}>
-        <ul>
-          {warningTimes.map((time, index) => (
-            <li key={index} onClick={() => openModal(time)}>
-              {time}
-            </li>
-          ))}
-        </ul>
+      <div className={style.dargerContainer}>
+        <div className={style.dargerList}>
+          <ul>
+            {warningTimes.map((time, index) => (
+              <li key={index} onClick={() => openModal(time)}>
+                {time}
+              </li>
+            ))}
+          </ul>
+          <button className={style.searchB}>조회하기</button>
+        </div>
       </div>
 
       {/* 모달 창 */}
@@ -63,8 +66,8 @@ function Cam1() {
         <div className={style.modal} onClick={handleModalClick}>
           <div className={style.modalContent} ref={modalRef}>
             <div className={style.xcontainer}>
-          <button onClick={closeModal} className={style.XButton}>X</button>
-          </div>
+              <button onClick={closeModal} className={style.XButton}>X</button>
+            </div>
             <div className={style.modalText}>
               <GoDotFill className={style.icon} />
               <span className={style.camModalText}>CAMERA 01</span>
@@ -73,8 +76,8 @@ function Cam1() {
             <div className={style.warningCam}></div>
             {/* 삭제 버튼을 추가하고 클릭 시 deleteWarningTime 함수 호출 */}
             <div className={style.buttonList}>
-            <button onClick={deleteWarningTime} className={style.deleteButton}>삭제</button>
-            <button onClick={closeModal} className={style.closeButton}>닫기</button>
+              <button onClick={deleteWarningTime} className={style.deleteButton}>삭제</button>
+              <button onClick={closeModal} className={style.closeButton}>닫기</button>
             </div>
           </div>
         </div>
