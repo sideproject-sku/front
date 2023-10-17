@@ -40,29 +40,45 @@
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.dargerList {
+.dargerContainer {
   position: absolute;
   top: 11vh;
-  right: 1vw;
+  right: 1.4vw;
+  color: white;
+}
+
+.dargerContainer p {
+  font-size: xx-large;
+}
+.dargerList {
   color: white;
   font-size: 17px;
   overflow-y: auto;
   max-height: 80%;
+  margin: 10px 0px;
 }
 
 .dargerList li {
   list-style: none;
-  margin-bottom: 3px;
-  font-size: larger;
+  margin-bottom: 7px;
+  font-size: 23px;
 }
 
-.searchB {
+.checkB {
   background-color: #fff;
-  width: 100px;
-  height: 30px;
+  width: 110px;
+  height: 32px;
   border-radius: 7px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+  margin-top: 13px;
+  font-weight: bolder;
+  font-size: medium;
 
+  &:hover {
+    background-color: rgb(237, 237, 237);
+  }
 }
 
 /* 모달 */

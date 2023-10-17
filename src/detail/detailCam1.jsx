@@ -6,6 +6,14 @@ function Cam1() {
   // CCTV 경고 시각 데이터 예시 (백엔드에서 받아온 데이터로 대체해야 함)
   const [warningTimes, setWarningTimes] = useState([
     "08-31-2023 FRI 09:39:13 AM",
+    "08-31-2023 FRI 11:19:23 AM",
+    "08-31-2023 FRI 11:19:23 AM",
+    "08-31-2023 FRI 11:19:23 AM",
+    "08-31-2023 FRI 11:19:23 AM",
+    "08-31-2023 FRI 11:19:23 AM",
+    "08-31-2023 FRI 11:19:23 AM",
+    "08-31-2023 FRI 11:19:23 AM",
+    "08-31-2023 FRI 11:19:23 AM",
     "08-31-2023 FRI 11:19:23 AM"
     // 다른 경고 시각들을 여기에 추가
   ]);
@@ -49,6 +57,10 @@ function Cam1() {
       </div>
       <div className={style.camera1}></div>
       <div className={style.dargerContainer}>
+        <div className="dargerText">
+          <p>count</p>
+          <p>state</p>
+        </div>
         <div className={style.dargerList}>
           <ul>
             {warningTimes.map((time, index) => (
@@ -57,10 +69,9 @@ function Cam1() {
               </li>
             ))}
           </ul>
-          <button className={style.searchB}>조회하기</button>
         </div>
+        <button className={style.checkB}>조회하기</button>
       </div>
-
       {/* 모달 창 */}
       {modalOpen && (
         <div className={style.modal} onClick={handleModalClick}>

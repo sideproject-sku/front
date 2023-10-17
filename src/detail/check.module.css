@@ -1,0 +1,10 @@
+.checkContainer {
+   position: absolute;
+   top: 60px;
+   left: 150px;
+   font-size: 23px;
+   color: white;
+}
+
+.checkContainer table {
+}

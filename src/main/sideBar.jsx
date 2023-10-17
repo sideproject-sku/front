@@ -8,6 +8,7 @@ import {
     PiNumberSquareFourLight,
     PiMapPinLight
 } from "react-icons/pi";
+import { HiOutlineExclamationTriangle } from "react-icons/hi2";
 import style from './sideBarStyle.module.css';
 import { Link } from "react-router-dom";
 
@@ -65,6 +66,14 @@ function SideBar() {
                             지도 보기
                         </span>
                     </a>
+                </li>
+                <li className={style['side-list']}>
+                    <Link to="/check"  className={style.text}>
+                        <HiOutlineExclamationTriangle className={style.icon} />
+                        <span className={style['nav-item']}>
+                            위험 시각 조회
+                        </span>
+                    </Link>
                 </li>
             </ul>
         </nav>
