@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Link } from 'react-router-dom';
 import { GoDotFill } from "react-icons/go";
 import style from './detailCamStyle.module.css';
 
@@ -70,7 +71,13 @@ function Cam1() {
             ))}
           </ul>
         </div>
-        <button className={style.checkB}>조회하기</button>
+        <Link to={{ 
+  pathname: "/check", 
+  state: { value: "1" } 
+}}>
+          <button className={style.checkB}>조회하기</button>
+        </Link>
+        
       </div>
       {/* 모달 창 */}
       {modalOpen && (
