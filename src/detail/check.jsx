@@ -1,7 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import styles from './check.module.css';
+import Modal from './modal';
 
 function Check() {
   /* 
@@ -68,15 +69,30 @@ function Check() {
   const filteredData = selectedOption === '전체 조회' ? data : data.filter((item) => item.camera_Id.toString() === selectedOption);
 
 const selectList = [
-  {value: "전체 조회", name: "전체 조회"},
+  {value: "전체 조회", name: "전체 조회하기"},
   {value: "1", name: "카메라1"},
   {value: "2", name: "카메라2"}
 ];
 
+
+//모달 코드
+const [isModalOpen, setIsModalOpen] = useState(false);
+const [selectedItem, setSelectedItem] = useState(null);
+
+const handleCheck = (item) => {
+  setSelectedItem(item);
+  setIsModalOpen(true);
+};
+
+const closeModal = () => {
+  setIsModalOpen(false);
+};
+
   return (
     <div className={styles.checkContainer}>
-      <div>
-        <select value={selectedOption} onChange={handleOptionChange}>
+      <div className={styles.selectContainer}>
+        <select className={`${styles.selectBox} ${styles.customSelect}`}
+        value={selectedOption} onChange={handleOptionChange}>
         {selectList.map((item) => {
             return <option value={item.value} key={item.value}>
               {item.name}
@@ -84,7 +100,7 @@ const selectList = [
           })}
         </select>
       </div>
-      <table>
+      <table className={styles.table}>
         <thead>
           <tr>
             <th>카메라</th>
@@ -96,20 +112,29 @@ const selectList = [
         </thead>
         <tbody>
           {filteredData.map((item, index) => (
-            <tr key={index}>
-              <td>{`CAMERA ${item.camera_Id}`}</td>
-              <td>
+            <tr key={index} className={styles.tableTr}>
+              <td className={styles.cam}>{`CAMERA ${item.camera_Id}`}</td>
+              <td className={styles.camImg}>
                 <img src={item.img} alt={`Image ${index}`} style={{ width: '100px', height: '50px' }} />
               </td>
-              <td>{item.head_count}</td>
-              <td>{item.date}</td>
-              <td>
-                <button onClick={() => handleDelete(item.camera_Id)}>삭제</button>
+              <td className={styles.count}>{item.head_count}</td>
+              <td className={styles.date}>{item.date}</td>
+              <td className={styles.buttonList}>
+                <button className={styles.checkButton}
+                onClick={() => handleCheck(item)}>확인</button>
+                <button className={styles.deleteButton}
+                onClick={() => handleDelete(item.camera_Id)}>삭제</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      {isModalOpen && (
+        <Modal
+          item={selectedItem}
+          closeModal={closeModal}
+        />
+      )}
     </div>
   );
 };

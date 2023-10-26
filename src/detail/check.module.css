@@ -1,10 +1,64 @@
 .checkContainer {
+   height: 100vh;
+}
+
+
+.selectContainer{
    position: absolute;
-   top: 60px;
+   top: 30px;
+   left: 150px;
+}
+
+.selectBox {
+   width: 120px;
+   height: 25px;
+   background-color: rgba(217, 217, 217, 1);
+   border-radius: 3px;
+   padding: 5px;
+}
+
+.table {
+   position: absolute;
+   top: 80px;
    left: 150px;
    font-size: 23px;
    color: white;
+   width: 80vw;
 }
 
-.checkContainer table {
+.table tr {
+   align-items: center;
+   display: flexbox;
+}
+.table td {
+   margin: 30px;
+}
+
+.deleteButton,
+.checkButton {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #000;
+  margin: 3px 7px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.deleteButton {
+  background-color: rgba(169, 0, 0, 1);
+  color: #fff;
+
+  &:hover {
+    background-color: rgba(140, 0, 0, 1);
+  }
+}
+
+.checkButton {
+  background-color: rgba(238, 238, 238, 1);
+
+  &:hover {
+    background-color: rgba(210, 200, 200, 1);
+  }
 }
