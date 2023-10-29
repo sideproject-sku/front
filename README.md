@@ -6,11 +6,11 @@
 <h3>사이드바</h3>
 <span>사이드바 아이콘에 마우스 호버 시 사이드바가 펼쳐짐</span>
 <span>위험 시각 조회 추가</span>
-<img width="183" alt="image" src="https://github.com/sideproject-sku/front/assets/80367621/e97520e1-373d-4416-b086-cc0b654b6930">
+<img alt="image" src="https://github.com/sideproject-sku/front/assets/80367621/e97520e1-373d-4416-b086-cc0b654b6930">
 
 
 <h3>카메라 페이지(상세)</h3>
-<img width="960" alt="image" src="https://github.com/sideproject-sku/front/assets/80367621/e880ba6c-ee58-45d4-ad60-4748f8fd85d7">
+<img alt="image" src="https://github.com/sideproject-sku/front/assets/80367621/e880ba6c-ee58-45d4-ad60-4748f8fd85d7">
 <span>조회 버튼 클릭 시 위험 시각 조회 페이지로 이동</span>
 
 <h3>위험시각 클릭 시 해당 시각 영상</h3>
@@ -21,7 +21,7 @@
 
 <h3>위험 시각 조회 페이지</h3>
 <span>시간순으로 한 페이지에 6개 데이터씩 정렬</span>
-<img width="960" alt="image" src="https://github.com/sideproject-sku/front/assets/80367621/e5e5b3d1-9ee7-44f4-89a9-7b282df5c6ba">
+<img alt="image" src="https://github.com/sideproject-sku/front/assets/80367621/e5e5b3d1-9ee7-44f4-89a9-7b282df5c6ba">
 <span>확인 버튼 클릭 시 모달 창 열림</span>
 <span>select 옵션 선택 시 해당 카메라 위험 시각만 조회</span>
-<img width="960" alt="image" src="https://github.com/sideproject-sku/front/assets/80367621/76d4e3ee-fb9f-4460-b42e-63966109a602">
+<img alt="image" src="https://github.com/sideproject-sku/front/assets/80367621/76d4e3ee-fb9f-4460-b42e-63966109a602">
