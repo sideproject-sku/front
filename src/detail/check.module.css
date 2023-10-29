@@ -20,7 +20,7 @@
 
 .table {
    position: absolute;
-   top: 70px;
+   top: 66px;
    left: 150px;
    font-size: 25px;
    color: white;
@@ -81,7 +81,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   margin: 20px;
+   margin-bottom: 13px;
    position: absolute;
    bottom: 0;
    left: 50%;
@@ -91,10 +91,10 @@
  .pagination button {
    border: none;
    color: white;
-   padding: 5px 9px;
+   padding: 5px 8px;
    cursor: pointer;
    border-radius: 5px;
-   font-size: 16px;
+   font-size: 13px;
  }
  .pagination button.activeButton  {
    background-color: white;
