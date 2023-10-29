@@ -49,8 +49,32 @@ function Check() {
     },
     {
       camera_Id: 1,
-      date: '08-31-2023 FRI 20:31:06 AM',
-      head_count: 2081,
+      date: '08-31-2023 FRI 16:42:19 AM',
+      head_count: 2379,
+      img: 'https://via.placeholder.com/150',
+    },
+    {
+      camera_Id: 1,
+      date: '08-31-2023 FRI 19:49:86 AM',
+      head_count: 7842,
+      img: 'https://via.placeholder.com/150',
+    },
+    {
+      camera_Id: 2,
+      date: '08-31-2023 FRI 22:31:06 AM',
+      head_count: 8130,
+      img: 'https://via.placeholder.com/150',
+    },
+    {
+      camera_Id: 1,
+      date: '08-31-2023 FRI 21:31:67 AM',
+      head_count: 9312,
+      img: 'https://via.placeholder.com/150',
+    },
+    {
+      camera_Id: 2,
+      date: '08-31-2023 FRI 23:42:91 AM',
+      head_count: 9312,
       img: 'https://via.placeholder.com/150',
     }
   ]);
@@ -88,6 +112,25 @@ const closeModal = () => {
   setIsModalOpen(false);
 };
 
+const [currentPage, setCurrentPage] = useState(1);
+const itemsPerPage = 5;
+
+// 현재 페이지에 해당하는 데이터 가져오기
+const indexOfLastItem = currentPage * itemsPerPage;
+const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+
+// 페이지 번호 계산
+const pageNumbers = [];
+for (let i = 1; i <= Math.ceil(filteredData.length / itemsPerPage); i++) {
+  pageNumbers.push(i);
+}
+
+const handlePageChange = (number) => {
+  setCurrentPage(number);
+};
+
+
   return (
     <div className={styles.checkContainer}>
       <div className={styles.selectContainer}>
@@ -111,11 +154,11 @@ const closeModal = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredData.map((item, index) => (
+          {currentItems.map((item, index) => (
             <tr key={index} className={styles.tableTr}>
               <td className={styles.cam}>{`CAMERA ${item.camera_Id}`}</td>
               <td className={styles.camImg}>
-                <img src={item.img} alt={`Image ${index}`} style={{ width: '100px', height: '50px' }} />
+                <img src={item.img} alt={`Image ${index}`} />
               </td>
               <td className={styles.count}>{item.head_count}</td>
               <td className={styles.date}>{item.date}</td>
@@ -129,6 +172,14 @@ const closeModal = () => {
           ))}
         </tbody>
       </table>
+      <div className={styles.pagination}>
+        {pageNumbers.map((number) => (
+          <button key={number} onClick={() => handlePageChange(number)}
+          className={currentPage === number ? styles.activeButton : ""}>
+            {number}
+          </button>
+        ))}
+      </div>
       {isModalOpen && (
         <Modal
           item={selectedItem}

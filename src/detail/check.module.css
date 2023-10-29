@@ -17,23 +17,37 @@
    padding: 5px;
 }
 
+
 .table {
    position: absolute;
-   top: 80px;
+   top: 70px;
    left: 150px;
-   font-size: 23px;
+   font-size: 25px;
    color: white;
    width: 80vw;
+   text-align: center;
+   border-spacing: 47px 7px;
 }
+.table thead::after {
+   content: '';
+   display: block;
+   height: 1px;
+   background: #fff;
+   width: 100%;
+   position: absolute;
+   left: 0;
+   margin: 10px 0;
+ }
 
-.table tr {
-   align-items: center;
-   display: flexbox;
-}
-.table td {
-   margin: 30px;
-}
+ .table tbody {
+   position: relative;
+   top: 20px;
+ }
 
+.table img {
+   width: 130px;
+   height: 70px;
+}
 .deleteButton,
 .checkButton {
   padding: 5px 15px;
@@ -62,3 +76,27 @@
     background-color: rgba(210, 200, 200, 1);
   }
 }
+
+.pagination {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 20px;
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+ 
+ .pagination button {
+   border: none;
+   color: white;
+   padding: 5px 9px;
+   cursor: pointer;
+   border-radius: 5px;
+   font-size: 16px;
+ }
+ .pagination button.activeButton  {
+   background-color: white;
+   color: rgba(71, 71, 71, 1);
+ }
