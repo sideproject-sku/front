@@ -20,7 +20,8 @@
 <img alt="modal" src="https://github.com/sideproject-sku/front/assets/80367621/f148f829-2254-41e8-868b-2b9adcb58537">
 
 <h3>위험 시각 조회 페이지</h3>
-<img alt"check" src="https://github.com/sideproject-sku/front/assets/80367621/f45bf429-9d1c-419e-a5ef-24c303fe47a9">
+<span>시간순으로 한 페이지에 6개 데이터씩 정렬</span>
+<img width="960" alt="image" src="https://github.com/sideproject-sku/front/assets/80367621/e5e5b3d1-9ee7-44f4-89a9-7b282df5c6ba">
 <span>확인 버튼 클릭 시 모달 창 열림</span>
 <span>select 옵션 선택 시 해당 카메라 위험 시각만 조회</span>
 <img width="960" alt="image" src="https://github.com/sideproject-sku/front/assets/80367621/76d4e3ee-fb9f-4460-b42e-63966109a602">
